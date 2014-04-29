@@ -1,0 +1,25 @@
+
+<!-- saved from url=(0055)http://cs.oswego.edu/~alex/teaching/csc490/hw/hw04.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>CSC490: Homework 4</title>
+<style type="text/css"></style></head><body bgcolor="#FFFFFF">
+<center>
+<h1>CSC490: Homework 4</h1>
+</center>
+<hr>
+<p>This homework is an upgrade to both HW2 and HW3. It requires you to make small changes to the ship in HW2, and large changes to the FSM in HW3.</p>
+<p>Change the ship (or add a new one) to become a saucer. The saucer does not require turning to thrust. It flies with antigravity, and thus doesn't suffer from inertia or slow acceleration. This means that you can input velocity vectors directly on the saucer, and its velocity is instantly replaced by the new one. The saucer also has a gun turret that can fire in any direction, independent of the direction of its motion.</p>
+<p>The saucer is a good candidate for a Fuzzy State Machine (FuSM) because its main systems, movement and attacking, are decoupled. Given some basic perceptions, each system can operate independently and concurrently. Thus, the saucer will no longer use a state system to progress from one state to another, but will rather have multiple independent activities contributing to the overall behavior of the ship.</p>
+<p>After you implement the saucer (if your hw2 code is good, this entails removing some code and adding a couple of lines), add a FuSM to control it with the following basic states:
+</p><ul>
+<li>Approach - this state aims to get the ship within range of the closest asteroid.</li>
+<li>Attack - this one merely fires the guns in the direction of the nearest asteroid. You can be a little clever here and use prediction on the asteroid's motion, but you don't have to.</li>
+<li>Evade - tries to avoid an asteroid on a collision course by monitoring the ship's speed.</li>
+</ul>
+<p></p>
+<p>The main bit of data that you'll need to calculate each state's activation level (its fuzzy truth value) is the distance to the nearest asteroid. The closer the asteroid is, the more the craft will evade and attack; the further away, the greater the activation of the approach behavior.</p>
+<p>If you have time, you can try combining this FuSM with a suitable FSM (e.g., for the evade state). HW4 is turning out to be very light in terms of coding (assuming that you did hw2 and hw3 correctly), and you can use the remaining time to adjust various parameters in preparation for the competition. For example, can you think of a good FuSM for the regular ship?</p>
+<p><a href="http://cs.oswego.edu/~alex/teaching/csc490/hw/FuSM.java">Here</a> is the code from class for FuSMs.</p>
+<hr>
+
+
+</body><style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</style></html>

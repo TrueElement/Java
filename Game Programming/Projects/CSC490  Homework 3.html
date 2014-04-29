@@ -1,0 +1,27 @@
+
+<!-- saved from url=(0055)http://cs.oswego.edu/~alex/teaching/csc490/hw/hw03.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>CSC490: Homework 3</title>
+<style type="text/css"></style></head><body bgcolor="#FFFFFF">
+<center>
+<h1>CSC490: Homework 3</h1>
+</center>
+<hr>
+<p>This homework is the first AI homework in the course. It uses your HW2 code.</p>
+<p>Add a Finite State Machine (FSM) to your Asteroids code that controls the ship. The FSM will be very simple, having only four states: Approach, Attack, Idle, and Evade. The state transitions are as follows:
+</p><ul>
+<li>Approach -(No Asteroids)-&gt; Idle</li>
+<li>Approach -(Will Collide)-&gt; Evade</li>
+<li>Idle -(No Asteroids in Range)-&gt; Approach</li>
+<li>Idle -(Asteroid in Range)-&gt; Attack</li>
+<li>Idle -(Will Collide)-&gt; Evade</li>
+<li>Attack -(No Asteroids in Range)-&gt; Idle</li>
+<li>Attack -(Will Collide)-&gt; Evade</li>
+<li>Evade -(Will Not Collide)-&gt; Idle</li>
+</ul>
+<p></p>
+<p>You have to code the state transition conditions and the states themselves. Every state does something different from the rest, and has quite a bit of code (e.g., a ship in the "Approach" state will locate the nearest asteroid and try to get it in range by applying the proper thrusts and rotations, etc).</p>
+<p>For the range, use a sensible number (e.g., half the screen). The ship's bullets are ineffective if they go beyond that.</p>
+<hr>
+
+
+</body><style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</style></html>

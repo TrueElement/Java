@@ -1,0 +1,22 @@
+
+<!-- saved from url=(0055)http://cs.oswego.edu/~alex/teaching/csc490/hw/hw06.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>CSC490: Homework 6 and 7</title>
+<style type="text/css"></style></head><body bgcolor="#FFFFFF">
+<center>
+<h1>CSC490: Homework 6 and 7</h1>
+</center>
+<hr>
+<p>In this homework you'll use the <a href="http://cs.oswego.edu/~alex/teaching/csc490/asteroidsfw/index.html">asteroidsfw</a> framework again.</p>
+<p>In this homework you will implement a genetic algorithm that will improve the Evade state. The gene design is very simple: a gene is just two chars, the first value signifying the thrust of the ship (forward, reverse, or none), and the second one representing an integer between 0 and 17 signifying the sector in which the AI wants the ship to point. (We define a sector to be 20 degrees, so a full circle has 18 of them.)</p>
+<p>The three questions that we'll use to determine the genome are:
+</p><ul>
+<li>How fast is the ship moving toward the asteroid? (We'll discuss how to get an exact value for this in class.) We'll quantize the value into a manageable range in a scale of 0-9, giving us 10 possible states.</li>
+<li>What direction are the asteroid and the ship moving in? (get the value here and place it in a sector between 0 and 17, giving us 18 states.)</li>
+<li>What is the separation distance? (four states)</li>
+</ul>
+<p></p>
+<p>The number of distinct evasion scenarios we get is 10*18*4 = 720. If we have a ship that knows how to evade in every one of these, it will be pretty good at evading. Your task is to find a good genome with the 720 genes in it by using a genetic algorithm.</p>
+<hr>
+
+
+</body><style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</style></html>
